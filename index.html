@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WEBSPARK-Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container-fluid header">
+    <div class="container top">
+        <div class="logo col-xs-6 col-sm-4 col-md-3">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <h1 class="col-xs-6 col-sm-4 col-md-3">monblanproject</h1>
+        <div class="button_header col-xs-3 col-sm-3 col-md-2">
+            Start on 17-02-2016
+        </div>
+        <div class="followers col-xs-6 col-sm-6 col-md-8">
+            <div class="row">
+                <div class="col-xs-4"><span>870</span> posts</div>
+                <div class="col-xs-4"><span>11,787</span> followers</div>
+                <div class="col-xs-4"><span>112</span> following</div>
+            </div>
+        </div>
+            <p class="date col-md-1">Date</p>
+            <div class="date_calendar col-xs-12 col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <div class="input-group date" id="datetimepicker7">
+                                <input type="text" class="form-control" placeholder="from">
+                                <span class="input-group-addon"><img src="images/calendar.png"></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <div class="input-group date" id="datetimepicker8">
+                                <input type="text" class="form-control" placeholder="to">
+                                <span class="input-group-addon"><img src="images/calendar.png"></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $("#datetimepicker7").datetimepicker();
+                        $("#datetimepicker8").datetimepicker({
+                            useCurrent: false
+                        });
+                        $("#datetimepicker7").on("dp.change", function (e) {
+                            $('#datetimepicker8').data("DateTimePicker").minDate(e.date);
+                        });
+                        $("#datetimepicker8").on("dp.change", function (e) {
+                            $('#datetimepicker7').data("DateTimePicker").maxDate(e.date);
+                        });
+                        $('.glyphicon-remove').click(function () {
+                            $('#datetimepicker7').data("DateTimePicker").clear();
+                        });
+                        $('.glyphicon-remove').click(function () {
+                            $('#datetimepicker8').data("DateTimePicker").clear();
+                        });
+                    });
+
+                </script>
+            </div>
+        </div>
+</div>
+</div>
+<div class="container gallery">
+    <div class=" block1 image_gallery">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block2">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-4">12800</div>
+            <div class="comments col-xs-3">3100</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block3">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block4">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block5">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block6">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block7">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block8">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+    <div class="image_gallery block9">
+        <div class="row text_today">
+            <div class="col-xs-5">Today</div>
+            <div class="likes col-xs-3">128</div>
+            <div class="comments col-xs-3">31</div>
+        </div>
+        <div class="row text_date">
+            <div class="col-xs-5">9-08-2016</div>
+            <div class="likes col-xs-3">67</div>
+            <div class="comments col-xs-3">22</div>
+        </div>
+        <div class="bottom_text col-xs-12">Image upload: 11-04-2016</div>
+    </div>
+</div>
+<div class="container button_gallery">
+    <button>Load more</button>
+</div>
+</body>
+</html>
